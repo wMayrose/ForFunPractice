@@ -10,14 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+            Image("me")
+            .resizable()                  // Makes the image resizable
+            .frame(width: 350, height: 350) // Sets the size (make smaller or bigger)
+            .aspectRatio(contentMode: .fit) // Keeps the aspect ratio so it doesn’t get stretched
+            .cornerRadius(170)
+            Spacer()
+            Text("My Practice")
+                .font(.largeTitle)
+                .foregroundColor(.black)
+                .fontWeight(.bold)
+            
+        } // end VStack
+    } // end body
+} // end struct
 
 #Preview {
     ContentView()
